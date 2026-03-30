@@ -19,7 +19,7 @@ async def on_message(message):
     if message.channel.id != CANAL_PERMITIDO_ID:
         return
 
-    if message.content.startswith("m!"):
+    if message.content.lower().startswith("m!"):
         try:
             await message.delete()
             print(f"Mensagem apagada: {message.content}")
